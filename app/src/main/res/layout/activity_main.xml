@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF6600"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewConsumoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consumo total R$"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_consumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textViewConsumoTotal"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewCouvertArtistico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_consumo"
+        android:text="Couvert artístico R$:"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_couvert_artistico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_consumo"
+        android:layout_toRightOf="@id/textViewCouvertArtistico"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewDividirContaPor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_couvert_artistico"
+        android:text="Dividir conta por:"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_dividir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_couvert_artistico"
+        android:layout_toRightOf="@id/textViewDividirContaPor"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bt_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_dividir"
+        android:onClick="btnCalcularContaFinal"
+        android:text="Calcular conta final"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewTaxaDeServico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_calcular"
+        android:text="Taxa de Serviço (10%):"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edt_servico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_calcular"
+        android:layout_toRightOf="@id/textViewTaxaDeServico"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textViewContaTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_servico"
+        android:text="Conta total R$:"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edt_conta_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_servico"
+        android:layout_toRightOf="@id/textViewContaTotal"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textViewValorPorPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_conta_total"
+        android:text="Valor por pessoa R$: "
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edt_valor_pessoa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_conta_total"
+        android:layout_toRightOf="@id/textViewValorPorPessoa"
+        android:ems="10"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edt_valor_pessoa"
+        android:focusable="auto"
+        app:srcCompat="@mipmap/logo_restaurante_balaio_de_lenha" />
+
+</RelativeLayout>
